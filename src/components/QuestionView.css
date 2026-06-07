@@ -1,0 +1,333 @@
+.question-view {
+  flex: 1;
+  padding: 32px 48px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.question-view.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #8888aa;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.empty-state h2 {
+  color: #c0c0e0;
+  margin: 0 0 8px;
+}
+
+.empty-state p {
+  color: #8888aa;
+  font-size: 0.95rem;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.question-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e0e0ff;
+}
+
+.question-topic {
+  background: #2d2d44;
+  color: #9999cc;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+}
+
+.btn-reset {
+  margin-left: auto;
+}
+
+.question-body {
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: #c0c0e0;
+  margin: 24px 0 12px;
+  font-weight: 600;
+}
+
+.code-block {
+  border-radius: 12px;
+  padding: 20px 24px !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.line-number {
+  display: inline-block;
+  width: 28px;
+  color: #4a4a6a;
+  text-align: right;
+  margin-right: 16px;
+  user-select: none;
+}
+
+.answer-section {
+  margin-top: 24px;
+}
+
+.answer-input {
+  width: 100%;
+  padding: 16px;
+  background: #1e1e36;
+  border: 1px solid #3b3b5c;
+  border-radius: 10px;
+  color: #e0e0ff;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #6c6cff;
+  box-shadow: 0 0 0 3px rgba(108, 108, 255, 0.15);
+}
+
+.answer-input.main-answer {
+  min-height: 100px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 12px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6c6cff, #4c4cdd);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #7c7cff, #5c5cee);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 108, 255, 0.3);
+}
+
+.btn-secondary {
+  background: #2d2d44;
+  color: #c0c0e0;
+  border: 1px solid #3b3b5c;
+}
+
+.btn-secondary:hover {
+  background: #3b3b5c;
+  border-color: #6c6cff;
+}
+
+.btn-reveal {
+  background: #2d4a2d;
+  color: #88cc88;
+  border: 1px solid #3b5c3b;
+}
+
+.btn-reveal:hover {
+  background: #3b5c3b;
+}
+
+.btn-reset {
+  background: #3b2d2d;
+  color: #cc8888;
+  border: 1px solid #5c3b3b;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+}
+
+.btn-reset:hover {
+  background: #5c3b3b;
+}
+
+.answer-reveal {
+  margin-top: 16px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.answer-card {
+  background: #1e2e1e;
+  border: 1px solid #2d4a2d;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.answer-card.why-card {
+  background: #1e1e2e;
+  border-color: #2d2d4a;
+}
+
+.answer-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #88cc88;
+  margin-bottom: 8px;
+}
+
+.why-card .answer-label {
+  color: #8888cc;
+}
+
+.answer-output {
+  margin: 0;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.95rem;
+  color: #a0ffa0;
+  white-space: pre-wrap;
+}
+
+.answer-card p {
+  margin: 0;
+  color: #c0c0e0;
+  line-height: 1.5;
+}
+
+.cross-questions-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #2d2d44;
+  animation: slideIn 0.3s ease;
+}
+
+.cross-question {
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.cq-title {
+  color: #9999cc;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.cq-text {
+  color: #e0e0ff;
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.cq-answer {
+  background: #1e2e1e;
+  border: 1px solid #2d4a2d;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+
+.cq-answer .answer-label {
+  margin-bottom: 4px;
+}
+
+.cq-answer p {
+  margin: 0;
+  color: #c0e0c0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .question-view {
+    padding: 60px 16px 24px;
+  }
+
+  .question-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .btn-reset {
+    margin-left: 0;
+  }
+
+  .question-body {
+    max-width: 100%;
+  }
+
+  .code-block {
+    font-size: 0.8rem;
+    padding: 14px 12px !important;
+    border-radius: 10px;
+  }
+
+  .line-number {
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  .answer-input {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+  }
+
+  .question-number {
+    font-size: 1.1rem;
+  }
+
+  .cross-question {
+    padding: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+  }
+
+  .empty-state h2 {
+    font-size: 1.1rem;
+  }
+}
